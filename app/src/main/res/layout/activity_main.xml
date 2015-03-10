@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ff6d8416"
+    android:id="@+id/relativeLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pirateView"
+        android:textSize="72sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Next Piratey Word"
+        android:id="@+id/pirateButton"
+        android:background="@android:color/white"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_above="@+id/pirateAnswerButton" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Piratey Definition"
+        android:id="@+id/pirateAnswerButton"
+        android:background="@android:color/white"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Previous Word"
+        android:id="@+id/previousButton"
+        android:background="@android:color/white"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_below="@+id/pirateAnswerButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Walk the Plank"
+        android:id="@+id/exitButton"
+        android:background="@android:color/white"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
