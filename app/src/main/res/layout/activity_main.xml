@@ -27,7 +27,8 @@
         android:id="@+id/pirateButton"
         android:background="@android:color/white"
         android:textColor="@android:color/holo_green_dark"
-        android:layout_above="@+id/pirateAnswerButton" />
+        android:layout_above="@+id/pirateAnswerButton"
+        android:textAllCaps="false"/>
 
     <Button
         android:layout_width="match_parent"
@@ -37,7 +38,8 @@
         android:background="@android:color/white"
         android:textColor="@android:color/holo_green_dark"
         android:layout_centerVertical="true"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"/>
 
 
     <Button
@@ -50,7 +52,8 @@
         android:layout_below="@+id/pirateAnswerButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"/>
 
     <Button
         android:layout_width="match_parent"
@@ -60,7 +63,8 @@
         android:background="@android:color/white"
         android:textColor="@android:color/holo_green_dark"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"/>
 
 
 </RelativeLayout>
