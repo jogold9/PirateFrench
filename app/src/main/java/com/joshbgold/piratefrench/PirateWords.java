@@ -1,15 +1,20 @@
 package com.joshbgold.piratefrench;
 
-/**
- * Created by JoshG on 3/10/2015.
- */
 public class PirateWords {
-
     //Member variables (properties about the object)
-    int currentNumber =0;
-    int wordIndex = 0;
+    private int currentNumber = 0;
+    private int wordIndex = 0;
+    private boolean hasStarted = false;
 
-    public String [] mPirateWord = {
+    public int getWordIndex() {
+        return wordIndex;
+    }
+
+    public void setWordIndex(int wordIndex) {
+        this.wordIndex = wordIndex;
+    }
+
+    private String [] mPirateWord = {
             "pirate",
             "trésor",
             "navire",
@@ -19,8 +24,8 @@ public class PirateWords {
             "océan",
             "capitaine",
             "perroquet",
-            "canon",
-            "pillage",
+            "canon", //mot 9
+            "saccage",
             "attaque",
             "boucanier",
             "brûler",
@@ -29,7 +34,7 @@ public class PirateWords {
             "matelot",
             "matelot qualifié",
             "scorbut",
-            "scélérat",
+            "scélérat", //mot 19
             "escroc",
             "butín",
             "abandonné",
@@ -38,14 +43,14 @@ public class PirateWords {
             "terre", 
             "agression", 
             "bandana", 
-            "bandit", 
+            "criminel",
             "bandoulière", // mot 29 
             "tonneau", 
             "bataille", 
             "décapiter", 
             "bagarre ",
             "chavirage",
-            "capture",
+            "capter",
             "fret",
             "bord de mer",
             "pièces de monnaie",
@@ -57,38 +62,40 @@ public class PirateWords {
             "coutelas",
             "doublon",
             "correction d'oeil",
-            "First Mate",
+            "premier officier",
             "drapeau",
             "épaves", // mot 49
             "galion",
             "passerelle",
             "poudre",
-            "Heist",
+            "vol",
             "haute mer",
             "détourner",
             "coque de navire",
-            "île","quille","fouet", // mot 59
+            "île",
+            "quille",
+            "fouet", // mot 59
             "carte",
             "mât",
             "fusil",
             "mutinerie",
             "nautique",
             "naviguer",
-            "pegleg",
-            "Pieces of Eight",
+            "jambe de bois",
+            "pièces de huit",
             "pistolet",
             "quartier",
             "quête", // mot 69
-            "raid",
-            "rations",
+            "de mauvais augure",
+            "vivres",
             "richesse",
             "gréement",
             "corde",
             "gouvernail",
             "rhum",
             "voile",
-            "cicatrice", // mot 79
-            "algues",
+            "cicatrice",
+            "algues", // mot 79
             "terre",
             "tamponner le pont",
             "l'épée",
@@ -99,10 +106,18 @@ public class PirateWords {
             "x marque l'endroit",
             "marcher la planche", // mot 89
             "cape et d'épée",
+            "requin",
+            "bourrasque",
+            "houle",
+            "os",
+            "squelette",
+            "potence",
+            "poignard",
+            "abandonner" //word 99
     };
 
 
-    public String [] mPirateAnswer = {
+    private String [] mPirateAnswer = {
             "pirate", //word 0
             "treasure",
             "ship",
@@ -113,7 +128,7 @@ public class PirateWords {
             "captain",
             "parrot",
             "cannon", //word 9
-            "plunder",
+            "pillage",
             "attack",
             "buccaneer",
             "burn",
@@ -131,7 +146,7 @@ public class PirateWords {
             "ashore",
             "assault",
             "bandanna",
-            "bandit",
+            "criminal",
             "bandolier", //word 29
             "barrel",
             "battle",
@@ -139,7 +154,7 @@ public class PirateWords {
             "brawl",
             "capsize",
             "capture",
-            "cargo",
+            "freight",
             "seashore",
             "coins",
             "compass",  //word 39
@@ -174,7 +189,7 @@ public class PirateWords {
             "pistol",
             "quartermaster", //word 69
             "quest",
-            "raid",
+            "ominous",
             "rations",
             "riches",
             "rigging",
@@ -193,36 +208,73 @@ public class PirateWords {
             "yellow fever",
             "x marks the spot",
             "walk the plank", //word 89
-            "swashbuckling"
+            "swashbuckling",
+            "shark",
+            "squall",
+            "heave",
+            "bones",
+            "skeleton",
+            "gallows",
+            "dagger",
+            "jettison"  //word 99
+     };
 
-    };
-
-    //returns Spanish word
-    public String getPirateWord(){
+    //returns French word, used for Main Activity
+    public String getPirateWord() {
         String pirateWord = mPirateWord[wordIndex];
         currentNumber = wordIndex;
         if (wordIndex < mPirateWord.length - 1) {
             wordIndex = wordIndex + 1;
         }
+        hasStarted = true;
         return pirateWord;
     }
 
-    //returns English definition
-    public String getPirateAnswer(){
-        String pirateAnswer = mPirateAnswer[currentNumber];
+    //returns French word, used for quizzes
+    public String getPirateWord(int rank) {
+        String pirateWord = mPirateWord[wordIndex + (rank * 10)];  //grabs the appropriate word list for their rank
+        currentNumber = wordIndex;
+        if (wordIndex < mPirateWord.length - 1) {
+            wordIndex = wordIndex + 1;
+        }
+        hasStarted = true;
+        return pirateWord;
+    }
+
+    //returns English definition, used for Main Activity
+    public String getPirateAnswer(boolean hasStarted) {
+        String emptyAnswer = "";
+        if (hasStarted) {
+            String pirateAnswer = mPirateAnswer[currentNumber];
+            return pirateAnswer;
+        }
+        return emptyAnswer = "";
+    }
+
+    //returns English definition, used for quizzes
+    public String getPirateAnswer(int rank) {
+        String pirateAnswer = mPirateAnswer[currentNumber + (rank * 10)];  //grabs the appropriate word list for their rank
         return pirateAnswer;
     }
 
     //goes back to previous word, unless you are on the first word already
     public String getPrevious() {
         String previousWord = "";
-        if (currentNumber != 0) {
-            currentNumber = currentNumber - 1;
-            wordIndex = wordIndex -1;
+        String emptyAnswer = "";
+
+        if (hasStarted){
+            if (currentNumber != 0) { //we are past the first word
+                currentNumber = currentNumber - 1;
+                wordIndex = wordIndex - 1;
+                previousWord = mPirateWord[currentNumber];
+                return previousWord;
+            }
+            else if (currentNumber == 0){  //we are at the first word, "pirata"
+                previousWord = mPirateWord[currentNumber];
+                return previousWord;
+            }
         }
-        previousWord = mPirateWord[currentNumber];
-        return previousWord;
-//}
+        return emptyAnswer;  //shows nothing when we haven't even displayed the first word
     }
 
 }
