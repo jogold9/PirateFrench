@@ -131,9 +131,9 @@ public class quizActivity extends MainActivity {
             startCaptainActivity();
         }
 
-        else if (quizWordCount > 9 && quizOver == false) {
+        /*else if (quizWordCount > 9 && quizOver == false) {
             quizOver();
-        }
+        }*/
 
         //compare to correct answer
         else if (!quizOver) {
