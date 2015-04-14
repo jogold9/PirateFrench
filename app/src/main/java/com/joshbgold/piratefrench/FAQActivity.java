@@ -24,8 +24,8 @@ public class FAQActivity extends MainActivity {
                         "What are the ranks in the game? \n" +
                         "The ranks in ascending order are Powder Monkey, sailor, rigger, gunner's mate, gunner, " +
                         "boatswain, carpenter, sailing master, quartermaster, and captain. \n\n" +
-                        "Can the pieces of eight be spent?\n" +
-                        "Perhaps in a future update you will be able to use the pieces of eight, but unfortunately not at this time."
+                        "How many correct answers are required to pass a quiz?\n" +
+                        "Eight out of ten or better."
         );
 
         View.OnClickListener walkThePlank = new View.OnClickListener() {
