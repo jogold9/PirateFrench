@@ -14,7 +14,7 @@ public class quizActivity extends MainActivity {
 
     private PirateWords mPirateWords = new PirateWords();
     private Rank mRank = new Rank();
-    private Quests mQuest = new Quests();
+    private questsActivity mQuest = new questsActivity();
     private TextView mUserRank;
     private TextView mVoyage;
     private TextView mProgress;

@@ -26,17 +26,17 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.joshbgold.piratefrench.MainActivity" />
+                android:value="com.joshbgold.piratefrench.quizActivity" />
         </activity>
 
         <activity
             android:name=".SettingsActivity"
             android:label="Pirate French"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".questsActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.joshbgold.piratefrench.MainActivity" />
+                android:value="com.joshbgold.piratefrench.SettingsActivity" />
         </activity>
 
         <activity
@@ -46,7 +46,7 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.joshbgold.piratefrench.MainActivity" />
+                android:value="com.joshbgold.piratefrench.WordPracticeActivity" />
         </activity>
 
         <activity
@@ -66,7 +66,17 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.joshbgold.piratefrench.MainActivity" />
+                android:value="com.joshbgold.piratefrench.FAQActivity" />
+        </activity>
+
+        <activity
+            android:name=".questsActivity"
+            android:label="Pirate French"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".questsActivity" />
         </activity>
 
     </application>

@@ -40,7 +40,7 @@ public class MainActivity extends ActionBarActivity {
         View.OnClickListener beOffToBattle = new View.OnClickListener() {
             @Override
             public void onClick (View view) {
-                startQuiz();
+                startQuestsActivity();
             }
         };
 
@@ -52,6 +52,7 @@ public class MainActivity extends ActionBarActivity {
             }
         };
 
+        //faq button
         View.OnClickListener faq = new View.OnClickListener(){
             @Override
             public void onClick (View view) {
@@ -92,26 +93,12 @@ public class MainActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
-    //go to the quiz page
-    private void startQuiz() {
-        //get user rank
-        rank = LoadPreferences("UserRank", rank);
-
-        if (rank == 9){ //User is a captain, and has won the game!
-            startCaptainActivity();
-        }
-        else {
-            Intent intent = new Intent(MainActivity.this, quizActivity.class);
-            startActivity(intent);
-        }
-    };
-
-    //go to the settings page
-    private void startCaptainActivity(){
-
-        Intent intent = new Intent(MainActivity.this, CaptainActivity.class);
+    private void startQuestsActivity(){
+        Intent intent = new Intent(MainActivity.this, questsActivity.class);
         startActivity(intent);
     }
+
+
 
     //save prefs
     public void savePrefs(String key, int value){

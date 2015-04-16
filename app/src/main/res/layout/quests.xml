@@ -16,20 +16,31 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:src="@drawable/pirate_captain"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="15dp"/>
 
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/captain_retirement"
+        android:text="Quest text goes here"
         android:id="@+id/questText"
-        android:layout_above="@+id/exitButton"
-        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/continueButton"
+        android:layout_marginBottom="15dp"
         android:layout_centerHorizontal="true"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/white"/>
+
+    <Button
+        style="@style/buttonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:id="@+id/continueButton"
+        android:textAllCaps="false"
+        android:layout_above="@+id/exitButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"/>
 
     <Button
         style="@style/buttonStyle"

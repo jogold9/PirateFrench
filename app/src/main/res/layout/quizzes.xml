@@ -63,7 +63,8 @@
         android:layout_marginBottom="5dp"
         android:layout_above="@+id/checkButton"
         android:textAllCaps="false"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        />
 
     <Button
         style="@style/buttonStyle"
