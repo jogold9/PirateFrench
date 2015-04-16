@@ -3,11 +3,13 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-    </style>
+</style>
 
-    <!--<style name="buttonStyle">-->
-        <!--android:background="@android:color/white"-->
-        <!--android:textColor="@android:color/holo_red_dark"-->
-    <!--</style>-->
+  <style name="buttonStyle">
+         <item name = "android:background">@android:color/white</item>
+         <item name = "android:textColor">@android:color/holo_red_dark</item>
+  </style>
+
+
 
 </resources>

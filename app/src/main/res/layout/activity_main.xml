@@ -9,34 +9,31 @@
                 android:id="@+id/relativeLayout">
 
     <Button
+        style="@style/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Warm Up Yer Cannons"
         android:id="@+id/practiceWordsButton"
-        android:background="@android:color/white"
-        android:textColor="@android:color/holo_red_dark"
         android:layout_above="@+id/quizButton"
         android:layout_marginTop="5dp"
         android:textAllCaps="false"/>
 
     <Button
+        style="@style/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Be off to Battle"
         android:id="@+id/quizButton"
-        android:background="@android:color/white"
-        android:textColor="@android:color/holo_red_dark"
         android:layout_centerVertical="true"
         android:layout_marginTop="5dp"
         android:textAllCaps="false"/>
 
     <Button
+        style="@style/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SOS"
         android:id="@+id/helpButton"
-        android:background="@android:color/white"
-        android:textColor="@android:color/holo_red_dark"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="5dp"
@@ -44,12 +41,11 @@
         android:layout_below="@+id/quizButton"/>
 
     <Button
+        style="@style/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Piratey FAQ"
         android:id="@+id/FAQButton"
-        android:background="@android:color/white"
-        android:textColor="@android:color/holo_red_dark"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="5dp"
@@ -57,15 +53,13 @@
         android:layout_below="@+id/helpButton"/>
 
     <Button
+        style="@style/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Walk the Plank"
         android:id="@+id/exitButton"
-        android:background="@android:color/white"
-        android:textColor="@android:color/holo_red_dark"
         android:textAllCaps="false"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        />
+        android:layout_centerHorizontal="true"     />
 
 </RelativeLayout>

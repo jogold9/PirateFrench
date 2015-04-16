@@ -55,24 +55,22 @@
         android:textColor="@android:color/white"/>
 
     <Button
+        style="@style/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Get Piratey Quiz Word"
         android:id="@+id/getQuizWordButton"
-        android:background="@android:color/white"
-        android:textColor="@android:color/holo_red_dark"
         android:layout_marginBottom="5dp"
         android:layout_above="@+id/checkButton"
         android:textAllCaps="false"
         android:layout_centerHorizontal="true"/>
 
     <Button
+        style="@style/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Check Yer Word, Matey"
         android:id="@+id/checkButton"
-        android:background="@android:color/white"
-        android:textColor="@android:color/holo_red_dark"
         android:layout_marginBottom="5dp"
         android:textAllCaps="false"
         android:layout_above="@+id/exitButton"
@@ -80,12 +78,11 @@
         />
 
     <Button
+        style="@style/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Walk the Plank"
         android:id="@+id/exitButton"
-        android:background="@android:color/white"
-        android:textColor="@android:color/holo_red_dark"
         android:textAllCaps="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

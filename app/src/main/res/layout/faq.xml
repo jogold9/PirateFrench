@@ -9,12 +9,11 @@
                 android:background="#ff851c01">
 
     <Button
+        style="@style/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Walk the Plank"
         android:id="@+id/exitButton"
-        android:background="@android:color/white"
-        android:textColor="@android:color/holo_red_dark"
         android:textAllCaps="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
