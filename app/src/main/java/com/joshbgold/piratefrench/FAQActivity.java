@@ -20,7 +20,7 @@ public class FAQActivity extends MainActivity {
 
         faq.setText("What are the quests in the game? \n"
                         + "The quests are Maiden Voyage, Nombre de Dios, " +
-                        "Porto Bello,  Panama City, Santa Marta, Cartegena, Asunción, Granada, and Nueva Cádiz. \n\n" +
+                        "Porto Bello,  Panama City, Santa Marta, Cartegena, Forteleza, Granada, and Nueva Cádiz. \n\n" +
                         "What are the ranks in the game? \n" +
                         "The ranks in ascending order are Powder Monkey, sailor, rigger, gunner's mate, gunner, " +
                         "boatswain, carpenter, sailing master, quartermaster, and captain. \n\n" +

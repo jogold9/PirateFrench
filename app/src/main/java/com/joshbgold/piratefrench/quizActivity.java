@@ -90,7 +90,9 @@ public class quizActivity extends MainActivity {
             public void onClick(View view) {
                 savePrefs("UserPoints", piecesOfEight);
                 savePrefs("UserRank", rank);
-                finish();
+                Intent intent = new Intent(quizActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         };
 
@@ -117,7 +119,7 @@ public class quizActivity extends MainActivity {
 
         }
 
-        else if (quizWordCount > 9 && quizOver == false) {
+        else if (quizWordCount > 9 && !quizOver) {
             quizOver();
         }
     }
@@ -203,6 +205,7 @@ public class quizActivity extends MainActivity {
 
             if (score == 10) {
                 mEndingText.setText((success + bonus));
+                piecesOfEight = piecesOfEight + 10;
             }
             else {
                 mEndingText.setText(success);
