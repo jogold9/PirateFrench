@@ -25,7 +25,8 @@
         android:text="Show Next Piratey Word"
         android:id="@+id/pirateButton"
         android:layout_above="@+id/pirateAnswerButton"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        />
 
     <Button
         style="@style/buttonStyle"
