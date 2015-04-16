@@ -206,6 +206,7 @@ public class quizActivity extends MainActivity {
             if (score == 10) {
                 mEndingText.setText((success + bonus));
                 piecesOfEight = piecesOfEight + 10;
+                mPiecesOfEight.setText("Pieces of Eight: " + piecesOfEight);
             }
             else {
                 mEndingText.setText(success);

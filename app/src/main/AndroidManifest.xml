@@ -22,7 +22,7 @@
         <activity
             android:name=".quizActivity"
             android:label="Pirate French"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".questsActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -32,7 +32,7 @@
         <activity
             android:name=".SettingsActivity"
             android:label="Pirate French"
-            android:parentActivityName=".questsActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
