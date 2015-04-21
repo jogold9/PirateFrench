@@ -203,11 +203,12 @@ public class quizActivity extends MainActivity {
             mAnswer.setText("");
             mTextView.setText("");
 
-            String success = quests.getVoyageSuccess(rank) + " Yer new rank is " +  mRank.getRankDescription(rank) + "." +
-            " An' ten bonus pieces of eight fer a perfect score.";
+            String success = quests.getVoyageSuccess(rank) + " Yer new rank is " +  mRank.getRankDescription(rank) + ".";
+            String perfect = quests.getVoyageSuccess(rank) + " Yer new rank is " +  mRank.getRankDescription(rank) + "." +
+                    " An' ten bonus pieces of eight fer a perfect score.";
 
             if (score == 10) {
-                mEndingText.setText(success);
+                mEndingText.setText(perfect);
                 piecesOfEight = piecesOfEight + 10;
                 mPiecesOfEight.setText("Pieces of Eight: " + piecesOfEight);
             }
