@@ -189,6 +189,9 @@ public class quizActivity extends MainActivity {
     }
 
     void quizOver(){  //this method promotes user & awards coins if user passes quiz
+
+        questsActivity quests = new questsActivity();
+
         if (score >= 8) {
 
             if (rank != 9){  //If user is not a captain, promote them.
@@ -199,12 +202,12 @@ public class quizActivity extends MainActivity {
             mAnswer.setHint("");
             mAnswer.setText("");
             mTextView.setText("");
-            String success = "Ye succeeded on yer voyage.  Your new rank is "
-                    +  mRank.getRankDescription(rank) + ".";
-            String bonus = " An' ten bonus pieces of eight fer a perfect score.";
+
+            String success = quests.getVoyageSuccess(rank) + " Yer new rank is " +  mRank.getRankDescription(rank) + "." +
+            " An' ten bonus pieces of eight fer a perfect score.";
 
             if (score == 10) {
-                mEndingText.setText((success + bonus));
+                mEndingText.setText(success);
                 piecesOfEight = piecesOfEight + 10;
                 mPiecesOfEight.setText("Pieces of Eight: " + piecesOfEight);
             }
@@ -215,8 +218,7 @@ public class quizActivity extends MainActivity {
             quizOver = true;
         }
         else {
-            //later this fact will be from a String array, and based on rank
-            String loss = "Ye did not succeed on yer voyage. You remain at the rank of "
+            String loss = quests.getVoyageFailure(rank) + " Ye remain at the rank of "
                     + mRank.getRankDescription(rank) + ".";
             mAnswer.setHint("");
             mAnswer.setText("");
